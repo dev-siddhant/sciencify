@@ -15,7 +15,7 @@
 </head>
 <body class="light-mode">
     <div class="noise-overlay"></div>
-    
+
     <header>
         <nav>
             <div class="logo">
@@ -262,14 +262,14 @@
             <div class="footer-social">
                 <h3>Connect With Me</h3>
                 <div class="social-icons">
-                    <a href="https://github.com/devsiddhant" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/dev-siddhant" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://techhub.social/@curious" target="_blank" aria-label="Mastodon"><i class="fab fa-mastodon"></i></a>
                     <a href="mailto:siddhantadhikari@proton.me" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Sciencify. Made with <i class="fas fa-heart"></i> by <a href="https://github.com/devsiddhant" target="_blank">@devsiddhant</a> on GitHub</p>
+            <p>© 2024 Sciencify. Made with <i class="fas fa-heart"></i> by <a href="https://github.com/dev-siddhant" target="_blank">@dev-siddhant</a> on GitHub</p>
         </div>
     </footer>
 
@@ -279,12 +279,12 @@
             // Add IDs to headings for TOC
             const articleBody = document.querySelector('.article-body');
             const headings = articleBody.querySelectorAll('h2, h3');
-            
+
             headings.forEach(heading => {
                 const id = heading.textContent.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
                 heading.id = id;
             });
-            
+
             // Highlight current section in TOC
             const tocLinks = document.querySelectorAll('#toc a');
             const observerOptions = {
@@ -292,7 +292,7 @@
                 rootMargin: '0px',
                 threshold: 0.5
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -306,11 +306,11 @@
                     }
                 });
             }, observerOptions);
-            
+
             headings.forEach(heading => {
                 observer.observe(heading);
             });
-            
+
             // Render math formulas
             document.querySelectorAll('.math-formula').forEach(element => {
                 const formula = element.textContent.trim();
